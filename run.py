@@ -15,11 +15,13 @@ def dump():
     req_data['endpoint'] = request.endpoint
     req_data['method'] = request.method
     req_data['cookies'] = request.cookies
-    req_data['data'] = request.data
+    # Is a byte so don't export
+    # req_data['data'] = request.data
     req_data['environ'] = dict(environ)
     req_data['headers'] = dict(request.headers)
     req_data['headers'].pop('Cookie', None)
     req_data['args'] = request.args
     req_data['form'] = request.form
     req_data['remote_addr'] = request.remote_addr
+    print(req_data)
     return jsonify(req_data)
