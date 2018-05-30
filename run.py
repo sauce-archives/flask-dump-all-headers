@@ -13,6 +13,7 @@ def dump():
                if isinstance(v, text_type) or isinstance(v, string_types) or isinstance(v, integer_types)}
     req_data = {}
     req_data['host'] = request.host
+    req_data['ip'] = request.remote_addr
     req_data['endpoint'] = request.endpoint
     req_data['method'] = request.method
     req_data['cookies'] = request.cookies
