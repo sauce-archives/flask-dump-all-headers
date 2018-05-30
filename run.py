@@ -12,6 +12,7 @@ def dump():
     environ = {k: v for k, v in request.environ.items()
                if isinstance(v, text_type) or isinstance(v, string_types) or isinstance(v, integer_types)}
     req_data = {}
+    req_data['host'] = request.host
     req_data['endpoint'] = request.endpoint
     req_data['method'] = request.method
     req_data['cookies'] = request.cookies
