@@ -1,5 +1,5 @@
 ingress:
   enabled: true
   hosts:
-    - dump-all-headers.ingress.blocks.saucelabs.net
+    - dump-all-headers.ingress-priv.blocks.saucelabs.net
 flask_env: production
